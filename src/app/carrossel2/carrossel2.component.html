@@ -1,0 +1,29 @@
+
+
+    <div class="container form-shadow">
+        <div >
+          
+          <div class="slide_img">
+            <img src="{{imagemCorrente.url}}"/>  
+            <label class="pre" (click)="pre()"><img src="assets/img/left-white.png"  /></label>
+            <label class="nxt" (click)="nxt()"><img src="assets/img/rigth-white.png" /></label>
+          </div>
+        </div>
+    </div>
+      
+    <div class="container_miniaturas form-shadow">
+        
+        <div class="slide_img_miniature">
+            <div *ngFor="let img of imagesMiniatura"> 
+                <label><img [ngStyle]="{ opacity: img.status == true ? '0.9' : '0.5' }" (click)="cliqueMiniatura(img)" src="{{img.url}}"/></label>
+            </div>
+        </div>
+        
+        <button (click)="pre()"  class="pre_miniatura"><</button>
+        <button (click)="nxt()" class="nxt_miniatura">></button>
+        
+    </div>
+
+
+
+
